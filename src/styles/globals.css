@@ -1,6 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-*,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer  base {
+  .btn__load{
+    @apply relative  min-h-[85px] bg-black;
+  }
+}
+
 html,
 body {
   padding: 0;
@@ -20,4 +29,42 @@ a {
 body {
   color: #333;
   background: #FFF;
+}
+
+
+
+
+.button__loading::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding:15px;
+  margin: auto;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+  border: 3px solid transparent;
+  border-top-color: #333;
+  border-radius: 50%;
+  animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.btn__load{
+  position: relative !important;
+  min-height: '85px' !important;
+  background-color: 'red' !important;
 }

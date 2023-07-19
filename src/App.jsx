@@ -1,6 +1,7 @@
 
 import { useEffect } from "react";
 import "./styles/Home.css";
+import 'semantic-ui-css/semantic.min.css'
 import {
   BrowserRouter,
   Routes,

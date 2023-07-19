@@ -108,19 +108,3 @@ export const Networks = {
       Status: true
       },
     };
-    
-    
-    // export const Server = () => {
-    //   if(window.location.href.indexOf("https://ducoinexchange.com") == 0){
-    //     return "https://server.ducoinexchange.com";
-    //   }else{
-    //     return "https://server.ducoinexchange.com";
-    //   }
-    // }
-    // export const ServerGurley = () => {
-    //   if(window.location.href.indexOf("https://ducoinexchange.com") == 0){
-    //     return "https://server.gurleyswap.com";
-    //   }else{
-    //     return "https://server.gurleyswap.com/";
-    //   }
-    // }

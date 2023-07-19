@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react'
 import { ConnectWallet, useSigner, useAddress } from "@thirdweb-dev/react";
+import { Button } from 'semantic-ui-react'
+import { Placeholder } from 'semantic-ui-react'
+import Examples from './Examples';
 
 const Home = () => {
     const signer = useSigner();
@@ -13,7 +16,8 @@ const Home = () => {
 
     return(
       <main className="w-full">
-        <div className="w-full">teswt</div>
+        <Examples />
+        
       </main>
     )
   }

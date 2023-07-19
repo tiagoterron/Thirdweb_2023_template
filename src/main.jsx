@@ -13,7 +13,7 @@ const chain = {
   explorers: {},
   faucets: [],
   icon:  {
-    url: 'ipfs://bafybeidk4swpgdyqmpz6shd5onvpaujvwiwthrhypufnwr6xh3dausz2dm', width: 1800, height: 1800, format: 'png'
+    url: 'https://ducoinexchange.com/assets/grw.9897d069.png', width: 1800, height: 1800, format: 'png'
   },
   infoURL: "https://greenwoodexchange.com",
   name: "Greenwood",
