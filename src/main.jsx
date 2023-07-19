@@ -3,18 +3,39 @@ import { createRoot } from "react-dom/client";
 import App from "./App";
 import { ThirdwebProvider } from "@thirdweb-dev/react";
 import "./styles/globals.css";
+import { store } from './redux/store'
+import { Provider } from 'react-redux'
+import { BrowserRouter } from "react-router-dom";
 
-// This is the chain your dApp will work on.
-// Change this to the chain your app is built for.
-// You can also import additional chains from `@thirdweb-dev/chains` and pass them directly.
-const activeChain = "ethereum";
+const chain = {
+  chain: "GRW",
+  chainId: 5665,
+  explorers: {},
+  faucets: [],
+  icon:  {
+    url: 'ipfs://bafybeidk4swpgdyqmpz6shd5onvpaujvwiwthrhypufnwr6xh3dausz2dm', width: 1800, height: 1800, format: 'png'
+  },
+  infoURL: "https://greenwoodexchange.com",
+  name: "Greenwood",
+  nativeCurrency:  {name: 'GRW', symbol: 'GRW', decimals: 18},
+  networkId: 100,
+  rpc: ['https://node.ducoinexchange.com'],
+  shortName: "grw",
+  slip44: 700,
+  slug: "greenwood",
+  testnet: false
+}
 
 const container = document.getElementById("root");
 const root = createRoot(container);
 root.render(
-  <React.StrictMode>
-    <ThirdwebProvider activeChain={activeChain}>
-      <App />
-    </ThirdwebProvider>
-  </React.StrictMode>
+  <BrowserRouter>
+    <Provider store={store}>
+      <ThirdwebProvider activeChain={chain}>
+        <App />
+      </ThirdwebProvider>
+    </Provider>
+  </BrowserRouter>
 );
+
+
